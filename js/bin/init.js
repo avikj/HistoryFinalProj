@@ -33,10 +33,6 @@ $(document).ready( function(){
 			Materialize.toast('Please enter your name.', 1200);
 		}else{
 			var playerName = $('#name-input').val();
-			firebaseRef.push({
-				name: playerName,
-				score: 0
-			});
 			Materialize.toast('Added '+playerName+' to db.', 1200);
 			$('#intro-description').addClass('animated bounceOutLeft');
 			$('#name-form').addClass('animated bounceOutLeft');
@@ -104,6 +100,11 @@ $(document).ready( function(){
 
 				level++;
 				if(level == gameData.length){
+
+					firebaseRef.push({
+						name: name,
+						score: score
+					});
 					setTimeout(function(){
 						$('#response-wrapper, #desc').remove();
 					}, 300);
