@@ -14,7 +14,10 @@ h1, h3 {
 form {
 	width: 100%;
 }
-
+input {
+	width: 100%;
+}
 html{
 	overflow: hidden;
 }
+
