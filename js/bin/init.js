@@ -113,7 +113,11 @@ $(document).ready( function(){
 		});
 	}
 
-	function createCardHtml(response){
-		return '<p class="flow-text">'+response+'</p>'
-	}
+	firebaseRef.on('child_added', function(snapshot){
+		Materialize.toast(snapshot.val().name+' '+snapshot.val().score, 1000);
+	});
 });
+
+function createCardHtml(response){
+	return '<p class="flow-text">'+response+'</p>'
+}
