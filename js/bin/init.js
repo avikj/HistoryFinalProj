@@ -41,8 +41,7 @@ $(document).ready( function(){
 			$('#intro-description').addClass('animated bounceOutLeft');
 			$('#name-form').addClass('animated bounceOutLeft');
 			$('#name-form').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-				$('#name-form').remove();
-				$('#intro-description').remove();
+				$('#name-form, #intro-description').remove();
 				play(playerName);
 			});
 		}
@@ -103,7 +102,7 @@ $(document).ready( function(){
 				level++;
 				if(level == gameData.length){
 					setTimeout(function(){
-						$('#response-wrapper').remove();
+						$('#response-wrapper, #desc').remove();
 					}, 300);
 				}
 			}
