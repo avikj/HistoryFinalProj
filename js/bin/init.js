@@ -70,6 +70,7 @@ $(document).ready( function(){
 					$('#response0').addClass('animated bounceOut');
 					$('#response0').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
 						$('#response0').html(createCardHtml(gameData[level].options[0].value));
+						$('#response0').data('points', gameData[level].options[0].points);
 						$('#response0').removeClass('animated bounceOut');
 						$('#response0').addClass('animated bounceIn');
 						$('#response0').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
@@ -80,6 +81,7 @@ $(document).ready( function(){
 					$('#response1').addClass('animated bounceOut');
 					$('#response1').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
 						$('#response1').html(createCardHtml(gameData[level].options[1].value));
+						$('#response1').data('points', gameData[level].options[1].points);
 						$('#response1').removeClass('animated bounceOut');
 						$('#response1').addClass('animated bounceIn');
 						$('#response1').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
@@ -90,6 +92,7 @@ $(document).ready( function(){
 					$('#response2').addClass('animated bounceOut');
 					$('#response2').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
 						$('#response2').html(createCardHtml(gameData[level].options[2].value));
+						$('#response2').data('points', gameData[level].options[2].points);
 						$('#response2').removeClass('animated bounceOut');
 						$('#response2').addClass('animated bounceIn');
 						$('#response2').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
