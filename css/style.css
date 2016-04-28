@@ -1,0 +1,20 @@
+h1, h3 {
+	font-weight: 200;
+	margin: 40px;
+}
+
+#wrapper {
+	height: 100vh;
+}
+
+#title-content {
+	width: 100%;
+}
+
+form {
+	width: 100%;
+}
+
+html{
+	overflow: hidden;
+}
