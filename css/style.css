@@ -20,8 +20,9 @@ input {
 html{
 	overflow: hidden;
 }
-
-
+.number-square {
+	margin: 5px;
+}
 .square-text {
 	width: 100%;
 }
