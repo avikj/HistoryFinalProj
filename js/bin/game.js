@@ -42,7 +42,8 @@ $(document).ready( function(){
 			if(level == gameData.length){
 				firebaseRef.push({
 					name: name,
-					score: score
+					score: score,
+					timestamp: Date.now()
 				});
 				setTimeout(function(){
 					$('#response-wrapper, #desc').remove();

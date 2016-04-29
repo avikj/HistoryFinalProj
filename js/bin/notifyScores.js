@@ -1,4 +1,7 @@
 var firebaseRef = new Firebase('https://japanception.firebaseio.com/users');
+var startTime = Date.now();
 firebaseRef.on('child_added', function(snapshot){
-	Materialize.toast(snapshot.val().name+' scored '+snapshot.val().score, 1000);
+	var data = snapshot.val();
+	if(data.timestamp > startTime)
+		Materialize.toast(data.name+' scored '+data.score, 1000);
 });
