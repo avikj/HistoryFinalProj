@@ -29,8 +29,10 @@ $(document).ready( function(){
 
 	
 	var level = 0;
-	var name = sessionStorage.getItem('japanception-name');
+	var name = sessionStorage.getItem('japanception-name') ? sessionStorage.getItem('japanception-name') : 'guest'; 
 	var score = sessionStorage.getItem('japanception-score') ? parseInt(sessionStorage.getItem('japanception-score')) : 0;
+	sessionStorage.removeItem('japanception-score');
+	sessionStorage.removeItem('japanception-name');
 	var clicked = false;
 	nextQuestion();
 	$('.response').click(function(){
