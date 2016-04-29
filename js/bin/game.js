@@ -34,75 +34,73 @@ $(document).ready( function(){
 	var clicked = false;
 	nextQuestion();
 	$('.response').click(function(){
-		level++;
-		if(level == gameData.length){
-			firebaseRef.push({
-				name: name,
-				score: score
-			});
-			setTimeout(function(){
-				$('#response-wrapper, #desc').remove();
-			}, 300);
-		}else{
-			nextQuestion(this);
+		if(!clicked){
+			clicked = true;
+			score += $(this).data('points') ? $(this).data('points'): 0;
+			$('#score-display').html('score: '+score);
+			level++;
+			if(level == gameData.length){
+				firebaseRef.push({
+					name: name,
+					score: score
+				});
+				setTimeout(function(){
+					$('#response-wrapper, #desc').remove();
+				}, 300);
+			}else{
+
+				setTimeout(function(){
+					nextQuestion();
+				}, 300);
+			}
 		}
 	});
 
-	function nextQuestion(elementClicked){
-		if(!clicked){
-			clicked = true;
-			score += $(elementClicked).data('points') ? $(elementClicked).data('points'): 0;
-			// alert(score);
-			//$('.response').addClass('animated bounceOutLeft');
-			setTimeout(function(){
+	function nextQuestion(){
 
-				$('#desc').addClass('animated bounceOut');
-				$('#desc').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-					$('#desc').html(gameData[level].desc);
-					$('#desc').removeClass('animated bounceOut');
-					$('#desc').addClass('animated bounceIn');
-					$('#desc').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-						$('#desc').removeClass('animated bounceIn');
-					});
-				});		
-
-				$('#response0').addClass('animated bounceOut');
-				$('#response0').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-					$('#response0').html(createCardHtml(gameData[level].options[0].value));
-					$('#response0').data('points', gameData[level].options[0].points);
-					$('#response0').removeClass('animated bounceOut');
-					$('#response0').addClass('animated bounceIn');
-					$('#response0').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-						$('#response0').removeClass('animated bounceIn');
-					});
-				});		
-
-				$('#response1').addClass('animated bounceOut');
-				$('#response1').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-					$('#response1').html(createCardHtml(gameData[level].options[1].value));
-					$('#response1').data('points', gameData[level].options[1].points);
-					$('#response1').removeClass('animated bounceOut');
-					$('#response1').addClass('animated bounceIn');
-					$('#response1').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-						$('#response1').removeClass('animated bounceIn');
-					});
-				});		
-
-				$('#response2').addClass('animated bounceOut');
-				$('#response2').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-					$('#response2').html(createCardHtml(gameData[level].options[2].value));
-					$('#response2').data('points', gameData[level].options[2].points);
-					$('#response2').removeClass('animated bounceOut');
-					$('#response2').addClass('animated bounceIn');
-					$('#response2').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-						$('#response2').removeClass('animated bounceIn');
-					});
-
-					$('#score-display').html('score: '+score);
-				});		
+		$('#desc').addClass('animated bounceOut');
+		$('#desc').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+			$('#desc').html(gameData[level].desc);
+			$('#desc').removeClass('animated bounceOut');
+			$('#desc').addClass('animated bounceIn');
+			$('#desc').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+				$('#desc').removeClass('animated bounceIn');
 				clicked = false;
-			}, 300);
-		}
+			});
+		});		
+
+		$('#response0').addClass('animated bounceOut');
+		$('#response0').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+			$('#response0').html(createCardHtml(gameData[level].options[0].value));
+			$('#response0').data('points', gameData[level].options[0].points);
+			$('#response0').removeClass('animated bounceOut');
+			$('#response0').addClass('animated bounceIn');
+			$('#response0').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+				$('#response0').removeClass('animated bounceIn');
+			});
+		});		
+
+		$('#response1').addClass('animated bounceOut');
+		$('#response1').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+			$('#response1').html(createCardHtml(gameData[level].options[1].value));
+			$('#response1').data('points', gameData[level].options[1].points);
+			$('#response1').removeClass('animated bounceOut');
+			$('#response1').addClass('animated bounceIn');
+			$('#response1').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+				$('#response1').removeClass('animated bounceIn');
+			});
+		});		
+
+		$('#response2').addClass('animated bounceOut');
+		$('#response2').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+			$('#response2').html(createCardHtml(gameData[level].options[2].value));
+			$('#response2').data('points', gameData[level].options[2].points);
+			$('#response2').removeClass('animated bounceOut');
+			$('#response2').addClass('animated bounceIn');
+			$('#response2').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+				$('#response2').removeClass('animated bounceIn');
+			});
+		});		
 	}
 
 	
