@@ -9,10 +9,7 @@ $(document).ready( function(){
 
 			sessionStorage.setItem('japanception-name', $('#name-input').val());
 			sessionStorage.setItem('japanception-score', 0);
-
-			$('#name-form').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-				window.location = ('game.html');
-			});
+			window.location = 'game.html';
 		}
 	});
 
