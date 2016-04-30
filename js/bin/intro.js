@@ -9,7 +9,7 @@ $(document).ready( function(){
 
 			sessionStorage.setItem('japanception-name', $('#name-input').val());
 			sessionStorage.setItem('japanception-score', 0);
-			window.location = 'game.html';
+			window.location = 'decryption.html';
 		}
 	});
 

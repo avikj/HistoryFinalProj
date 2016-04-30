@@ -18,7 +18,8 @@
 
     <body>
       <div id="wrapper" class="container">
-        <p class="flow-text">
+        <h3 id="timer-display"></h3>
+        <p id="desc" class="flow-text animated bounceIn">
           Japanese Intelligence recently intercepted a coded message from Germany. However, your top 
           cryptanalysts have not been able to decode it. Help them decipher its meaning and determine
           Germany's next move. Type the decrypted message in the text box below. If you are unable to
@@ -26,30 +27,29 @@
           the respect that you will gain by stopping Germany.
         </p>
         <div class="row">
-          <button id="hint-button" class="btn-large col m4 offset-m4 s6 offset-s3 waves-effect">Hint</button>
-
+          <button id="hint-button" class="animated bounceIn btn-large col m4 offset-m4 s6 offset-s3 waves-effect">Hint</button>
         </div>
         <div class="row">
-          <div data-tooltip="20" data-position="bottom" data-delay="50" class="tooltipped waves-effect waves-light col m2 s2 red lighten-2 hoverable offset-s1 offset-m1 number-square valign-wrapper">
+          <div data-tooltip="20" data-position="bottom" data-delay="50" class="animated bounceIn tooltipped waves-effect waves-light col m2 s2 red lighten-2 hoverable offset-s1 offset-m1 number-square valign-wrapper">
             <p class="valign flow-text center-align white-text square-text">二十</p>
           </div>
-          <div data-tooltip="15" data-position="bottom" data-delay="50" class="tooltipped waves-effect waves-light col m2 s2 red lighten-2 hoverable number-square valign-wrapper">
+          <div data-tooltip="15" data-position="bottom" data-delay="50" class="animated bounceIn tooltipped waves-effect waves-light col m2 s2 red lighten-2 hoverable number-square valign-wrapper">
             <p class="valign flow-text center-align white-text square-text">十五</p>
           </div>
-          <div data-tooltip="11" data-position="bottom" data-delay="50" class="tooltipped waves-effect waves-light col m2 s2 red lighten-2 hoverable number-square valign-wrapper">
+          <div data-tooltip="11" data-position="bottom" data-delay="50" class="animated bounceIn tooltipped waves-effect waves-light col m2 s2 red lighten-2 hoverable number-square valign-wrapper">
             <p class="valign flow-text center-align white-text square-text">十一</p>
           </div>
-          <div data-tooltip="25" data-position="bottom" data-delay="50" class="tooltipped waves-effect waves-light col m2 s2 red lighten-2 hoverable number-square valign-wrapper">
+          <div data-tooltip="25" data-position="bottom" data-delay="50" class="animated bounceIn tooltipped waves-effect waves-light col m2 s2 red lighten-2 hoverable number-square valign-wrapper">
             <p class="valign flow-text center-align white-text square-text">二十五</p>
           </div>
-          <div data-tooltip="15" data-position="bottom" data-delay="50" class="tooltipped waves-effect waves-light col m2 s2 red lighten-2 hoverable number-square valign-wrapper">
+          <div data-tooltip="15" data-position="bottom" data-delay="50" class="animated bounceIn tooltipped waves-effect waves-light col m2 s2 red lighten-2 hoverable number-square valign-wrapper">
             <p class="valign flow-text center-align white-text square-text">十五</p>
           </div>
         </div>
         <form id="decoded-form">
           <div class="row">
-            <div class="input-field col s8 offset-s2">
-              <input id="decoded-field" type="text" class="validate">
+            <div class="input-field col s8 offset-s2 animated bounceIn">
+              <input id="decoded-field" type="text" autocomplete="off">
               <label for="decoded-field">Decoded Message</label>
             </div>
           </div>
