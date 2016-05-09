@@ -17,27 +17,16 @@
       <div id="wrapper" class="container">
         <div id="title-content" class="center-block">
           <h1 class="center-align animated bounceIn">High Scores</h1>
-          <table class="striped centered animated fadeIn">
+          <table id="scoretable" class="striped centered animated fadeIn">
             <thead>
               <tr>
                   <th data-field="name" class="animated bounceInLeft">Name</th>
-                  <th data-field="score" class="animated bounceInLeft">Score</th>
+                  <th data-field="score" class="animated bounceInRight">Score</th>
               </tr>
             </thead>
 
-            <tbody>
-              <tr>
-                <td class="animated bounceInRight">Yamato</td>
-                <td class="animated bounceInRight">1,000,000,000</td>
-              </tr>
-              <tr>
-                <td class="animated bounceInLeft">Windsor</td>
-                <td class="animated bounceInLeft">-1,000,000</td>
-              </tr>
-              <tr>
-                <td class="animated bounceInRight">Bismarck</td>
-                <td class="animated bounceInRight">-1,000,000,000</td>
-              </tr>
+            <tbody id="scoretable-body"  class="animated fadeIn">
+              
             </tbody>
           </table>
         </div>
@@ -45,5 +34,7 @@
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="js/bin/materialize.min.js"></script>
+      <script type="text/javascript" src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+      <script type="text/javascript" src="js/bin/scoretable.js"></script>
     </body>
   </html>
