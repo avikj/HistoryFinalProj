@@ -26,3 +26,8 @@ html{
 .square-text {
 	width: 100%;
 }
+
+.response{
+  margin-bottom: 5vh;
+  text-align: center;
+}

@@ -1,27 +1,32 @@
 $(document).ready( function(){
 	var firebaseRef = new Firebase('https://japanception.firebaseio.com/users');
 	var gameData = [{
-			desc: "What u gonna do to those nazis",
+			desc: "After multiple intercepted messages, "
+			+"you realize Germany is planning to ally with several "
+			+"other countries to attack Tokyo! You must avoid all attacks on your country. What is your next move?",
 			options: [
-				{value: "Spit fire and roast them", points: 20},
-				{value: "Eat them", points: 10},
-				{value: "Send kamakazi pilots to bomb them", points: 30}
+				{value: "Blame the Allies", points: 20},
+				{value: "Attack Germany", points: 50},
+				{value: "Ignore the message", points: 0}
 			]
 		},
 		{
-			desc: "When u gonna do that",
+			desc: "The government of Japan has decided to attack Germany! "
+			+"They want to use Kamikaze strikes to attack Berlin "
+			+"and completely destroy the German Third Reich and end World War II. "
+			+"A strong, determined person must carry out this operation to ensure its success. Who should lead this mission?",
 			options: [
-				{value: "Tomorrow", points: 30},
-				{value: "Next week", points: 20},
-				{value: "after they attack us", points: 10}
+				{value: "The top military commander", points: 30},
+				{value: "A random citizen - Anish Patchipala", points: -10},
+				{value: "I, the emperor of Japan", points: 50}
 			]
 		},
 		{
-			desc: "Who will lead this offensive?", 
+			desc: "Now you are ready for the attack! Your advisors say the plan is crazy - the emperor should not attack Berlin! What do you want to do?", 
 			options: [
-				{value: "I will.", points: 30},
-				{value: "My most trusted army general", points: 10},
-				{value: "Anish Patchipala", points: 20}
+				{value: "Abort the mission entirely", points: -20},
+				{value: "Forget the advisors", points: 50},
+				{value: "Call off the attack temporarily", points: 20}
 			]
 		}
 	]; 

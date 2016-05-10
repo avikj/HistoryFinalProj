@@ -46,7 +46,7 @@ $(document).ready(function(){
 		evt.preventDefault();
 		var input = $('#decoded-field').val().toLowerCase().trim()
 		if(input == 'tokyo'){
-			sessionStorage.setItem('japanception-score', timeLeft+100);
+			sessionStorage.setItem('japanception-score', timeLeft+90);
 			$('#timer-display').addClass('animated bounceOutLeft');
 			$('#desc').addClass('animated bounceOutRight');
 			$('#hint-button').addClass('animated bounceOutLeft')
