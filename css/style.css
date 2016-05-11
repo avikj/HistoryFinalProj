@@ -10,7 +10,9 @@ h1, h3 {
 #title-content {
 	width: 100%;
 }
-
+#attack-wrapper {
+	height: 50vh;
+}
 form {
 	width: 100%;
 }
