@@ -13,6 +13,9 @@ h1, h3 {
 #attack-wrapper {
 	height: 50vh;
 }
+td{
+	width: 50%;
+}
 form {
 	width: 100%;
 }

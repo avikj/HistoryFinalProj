@@ -14,14 +14,14 @@ $(document).ready(function(){
 		});
 		$tableBody.empty();
 		for(var i = 0; i < tableData.length; i++)
-			$tableBody.append(createRow(tableData[i]));''
+			$tableBody.append(createRow(tableData[i]));
 	}
 });
 
 function createRow(data){
-	return $('<tr><td class="animated fadeIn">'+
+	return $('<tr class="animated fadeIn"><td>'+
 			data.name+
-		'</td><td class="animated fadeIn">'
+		'</td><td>'
 			+data.score+
 		'</td></tr>');
 }
