@@ -34,10 +34,8 @@ $(document).ready( function(){
 
 	
 	var level = 0;
-	var name = sessionStorage.getItem('japanception-name') ? sessionStorage.getItem('japanception-name') : 'guest'; 
 	var score = sessionStorage.getItem('japanception-score') ? parseInt(sessionStorage.getItem('japanception-score')) : 0;
 	sessionStorage.removeItem('japanception-score');
-	sessionStorage.removeItem('japanception-name');
 	var clicked = false;
 	nextQuestion();
 	$('.response').click(function(){
@@ -47,13 +45,10 @@ $(document).ready( function(){
 			$('#score-display').html('score: '+score);
 			level++;
 			if(level == gameData.length){
-				firebaseRef.push({
-					name: name,
-					score: score,
-					timestamp: Date.now()
-				});
+				sessionStorage.setItem('japanception-score', score);
 				setTimeout(function(){
 					$('#response-wrapper, #desc').remove();
+					window.location = 'attack.html'
 				}, 300);
 			}else{
 

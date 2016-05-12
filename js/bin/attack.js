@@ -15,11 +15,20 @@ $(document).ready(function(){
       clickdButton = true;
       dir = 0;
       score += 100-Math.abs($slider.val());
-      sessionStorage.setItem('japanception-score', score);
       Materialize.toast(getDescription(score), 1000);
-      $('#thing').append('<div class="row"><button class="col m4 offset-m4 btn-large center-align waves-effect animated bounceInUp">Continue</button></div>');
+      $('#thing').append('<div id="continue-button" class="row"><button class="col m4 offset-m4 btn-large center-align waves-effect animated bounceInUp">Continue</button></div>');
+      $('#continue-button').click(function(){
+        firebaseRef.push({
+          name: name,
+          score: score,
+          timestamp: Date.now()
+        });
+        window.location = 'scoretable.html';
+      });
     }
   });
+
+  
 });
 
 function getDescription(score){
