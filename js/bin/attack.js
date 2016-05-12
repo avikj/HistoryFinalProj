@@ -12,7 +12,7 @@ $(document).ready(function(){
 
   $('#bomb-button').click(function(){
     if(!clickedButton){
-      clickdButton = true;
+      clickedButton = true;
       dir = 0;
       score += 100-Math.abs($slider.val());
       Materialize.toast(getDescription(score), 1000);
