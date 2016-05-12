@@ -19,7 +19,7 @@ $(document).ready(function(){
       $('#thing').append('<div id="continue-button" class="row"><button class="col m4 offset-m4 btn-large center-align waves-effect animated bounceInUp">Continue</button></div>');
       $('#continue-button').click(function(){
         firebaseRef.push({
-          name: name,
+          name: sessionStorage.getItem('japanception-name'),
           score: score,
           timestamp: Date.now()
         });
