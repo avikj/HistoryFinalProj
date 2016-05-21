@@ -22,7 +22,7 @@ $(document).ready(function(){
 				$('#times-up-display').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
 					setTimeout(function(){
 						window.location = 'game.html';
-					}, 3000);
+					}, 4000);
 				});
 			});
 			// 
