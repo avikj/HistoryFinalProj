@@ -13,7 +13,7 @@ $(document).ready( function(){
 			sessionStorage.setItem('japanception-score', 0);
 			window.location = 'decryption.html';
 		}else{
-			Materialize.toast('Invalid credentials! Make sure you spelled your group name and password correctly.', 1200);
+			Materialize.toast('Invalid credentials! Make sure you spelled your group name and password correctly.', 2000);
 		}
 	});
 });
@@ -32,6 +32,8 @@ function validLogin(group, password){
 			return reallyBadHash(password) == 180762;
 		case 'habsburg':
 			return reallyBadHash(password) == 191750;
+		case 'otto':
+			return reallyBadHash(password) == 165292;
 		default:
 			return false;
 	}
