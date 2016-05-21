@@ -42,7 +42,7 @@ $(document).ready( function(){
 		if(!clicked){
 			clicked = true;
 			score += $(this).data('points') ? $(this).data('points'): 0;
-			$('#score-display').html('score: '+score);
+			// $('#score-display').html('score: '+score);
 			level++;
 			if(level == gameData.length){
 				sessionStorage.setItem('japanception-score', score);
