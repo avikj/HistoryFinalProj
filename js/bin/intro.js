@@ -32,7 +32,7 @@ function validLogin(group, password){
 			return reallyBadHash(password) == 180762;
 		case 'habsburg':
 			return reallyBadHash(password) == 191750;
-		case 'otto':
+		case 'mr. otto':
 			return reallyBadHash(password) == 165292;
 		default:
 			return false;
