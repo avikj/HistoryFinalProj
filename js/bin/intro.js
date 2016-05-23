@@ -34,6 +34,10 @@ function validLogin(group, password){
 			return reallyBadHash(password) == 191750;
 		case 'mr. otto':
 			return reallyBadHash(password) == 165292;
+		case 'mr.otto':
+			return reallyBadHash(password) == 165292;
+		case 'mrotto':
+			return reallyBadHash(password) == 165292
 		default:
 			return false;
 	}
